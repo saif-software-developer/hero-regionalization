@@ -1,6 +1,6 @@
 # hero-regionalization
 Regionally distributed content to be visible on the index page so that website users have a more customized experience. 
-Based on a logic that matches the oem priorties with the HeroContentMap, we find the best hero content match.
+Based on a logic that matches the oem priorities with the HeroContentMap, we find the best hero content match.
 
 Example
 
