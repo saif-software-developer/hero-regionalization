@@ -1,10 +1,23 @@
 # hero-regionalization
 Regionally distributed content to be visible on the index page so that website users have a more customized experience. 
+Based on a logic that matches the oem priorties with the HeroContentMap, we find the best hero content match.
+
+Example
+
+```	
+imageUrl	"https://www-staging.dealer.com/assets/ddc_globe17.png"
+text	"I am a blacklabel text"
+url	"https://www.dealer.com/"
+
+```
 
 # API end points
+Each OEM has a priority list that priotrizes the order of different campaigns map, in the example below, customMap takes the first place, then zoneMAp, etc... 
+
 http://localhost:8080/hero-regional/findOEMContentPriorityForOemId/lincoln
 
 Expected output:
+
 ```
 oemId	"lincoln"
 priorityList	
@@ -17,6 +30,7 @@ priorityList
 http://localhost:8080/hero-regional/findHeroContentMapForOemId/lincoln
 
 Expected output:
+
 ```
 oemId	"lincoln"
 zoneMap	{…}
@@ -35,18 +49,16 @@ default
 imageurl	"https://www-staging.dealer.com/assets/ddc_globe17.png"
 text	"I am a default text"
 url	"https://www.dealer.com/"
-
 ```
 
 http://localhost:8080/hero-regional/findHeroContentForAccountId/whatever
 
 Expected output:
-```
-	
+
+```	
 imageUrl	"https://www-staging.dealer.com/assets/ddc_globe17.png"
 text	"I am a blacklabel text"
 url	"https://www.dealer.com/"
-
 ```
 
 # OemContentMap table
