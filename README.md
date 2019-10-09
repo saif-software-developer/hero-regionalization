@@ -159,9 +159,7 @@ http://heroregonalization-env.f5586wgf3e.us-west-2.elasticbeanstalk.com/hero-reg
 
 hero-regional-role 
 
-Attached policies 
-
-access-hero-regional-db 
+1) access-hero-regional-db 
 ```
 {
     "Version": "2012-10-17",
@@ -186,7 +184,7 @@ access-hero-regional-db
 }
 ```
 
-cai-default-ec2-policy 
+2) cai-default-ec2-policy 
 ```
 {
     "Version": "2012-10-17",
