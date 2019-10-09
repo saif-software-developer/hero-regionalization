@@ -151,7 +151,11 @@ url	"https://www.dealer.com/"
 
 # Deployment 
 The application can be deployed as ElasticBeanstalk 
-Example 
+Follow the instructions in this link : 
+https://guides.micronaut.io/micronaut-elasticbeanstalk/guide/index.html
+<br>
+Example
+<br>
 http://heroregonalization-env.f5586wgf3e.us-west-2.elasticbeanstalk.com/hero-regional/findHeroContentForAccountId/whatever
 
 
