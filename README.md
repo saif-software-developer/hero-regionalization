@@ -150,8 +150,8 @@ url	"https://www.dealer.com/"
 ```
 
 # Deployment 
-The application can be deployed as ElasticBeanstalk 
-Follow the instructions in this link : 
+The application is deployed as ElasticBeanstalk at hackathon account:
+<br>
 https://guides.micronaut.io/micronaut-elasticbeanstalk/guide/index.html
 <br>
 Example
