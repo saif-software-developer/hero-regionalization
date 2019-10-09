@@ -148,3 +148,106 @@ url	"https://www.dealer.com/"
   ]
 }
 ```
+
+# Deployment 
+The application can be deployed as ElasticBeanstalk 
+Example 
+http://heroregonalization-env.f5586wgf3e.us-west-2.elasticbeanstalk.com/hero-regional/findHeroContentForAccountId/whatever
+
+
+# IAM Role 
+
+hero-regional-role 
+
+Attached policies 
+
+access-hero-regional-db 
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor0",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:DeleteItem",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:UpdateItem"
+            ],
+            "Resource": [
+                "arn:aws:dynamodb:us-east-1:563537874497:table/OEMContentMap",
+                "arn:aws:dynamodb:us-east-1:563537874497:table/OEMContentPriority"
+            ]
+        }
+    ]
+}
+```
+
+cai-default-ec2-policy 
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "ssmpermissions",
+            "Effect": "Allow",
+            "Action": [
+                "ssmmessages:OpenDataChannel",
+                "ssmmessages:OpenControlChannel",
+                "ssmmessages:CreateDataChannel",
+                "ssmmessages:CreateControlChannel",
+                "ssm:UpdateInstanceInformation",
+                "ssm:UpdateInstanceAssociationStatus",
+                "ssm:UpdateAssociationStatus",
+                "ssm:PutInventory",
+                "ssm:PutConfigurePackageResult",
+                "ssm:PutComplianceItems",
+                "ssm:ListInstanceAssociations",
+                "ssm:ListAssociations",
+                "ssm:GetParameters",
+                "ssm:GetParameter",
+                "ssm:GetManifest",
+                "ssm:GetDocument",
+                "ssm:GetDeployablePatchSnapshotForInstance",
+                "ssm:DescribeDocument",
+                "ssm:DescribeAssociation",
+                "ec2messages:SendReply",
+                "ec2messages:GetMessages",
+                "ec2messages:GetEndpoint",
+                "ec2messages:FailMessage",
+                "ec2messages:DeleteMessage",
+                "ec2messages:AcknowledgeMessage"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "s3permissions",
+            "Effect": "Allow",
+            "Action": [
+                "s3:PutObjectAcl",
+                "s3:PutObject",
+                "s3:ListMultipartUploadParts",
+                "s3:ListBucketMultipartUploads",
+                "s3:ListBucket",
+                "s3:GetObject",
+                "s3:GetEncryptionConfiguration",
+                "s3:GetBucketLocation",
+                "s3:AbortMultipartUpload"
+            ],
+            "Resource": [
+                "arn:aws:s3:::cai-ssm-reporting-bucket/*",
+                "arn:aws:s3:::cai-ssm-reporting-bucket"
+            ]
+        }
+    ]
+}
+```
+
+
+
+
+
+
