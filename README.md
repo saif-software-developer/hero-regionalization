@@ -251,6 +251,10 @@ hero-regional-role
 
 
 
-
+## TODO List 
+1. Figure out how to collect account data 
+2. Build a react UI to interact with dynamDB tables 
+3. Figure out a way to have account custom config DB 
+4. Terraform it !!!
 
 
