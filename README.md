@@ -156,6 +156,7 @@ http://heroregonalization-env.f5586wgf3e.us-west-2.elasticbeanstalk.com/hero-reg
 
 
 # IAM Role 
+Under configuration > Security > IAM instance profile
 
 hero-regional-role 
 
