@@ -150,11 +150,11 @@ url	"https://www.dealer.com/"
 ```
 
 # Deployment 
-The application is deployed as ElasticBeanstalk at hackathon account:
+To deploy the application to aws, follow the instructions:
 <br>
 https://guides.micronaut.io/micronaut-elasticbeanstalk/guide/index.html
 <br>
-Example
+The application is deployed as ElasticBeanstalk at hackathon account:
 <br>
 http://heroregonalization-env.f5586wgf3e.us-west-2.elasticbeanstalk.com/hero-regional/findHeroContentForAccountId/whatever
 
