@@ -13,7 +13,7 @@ public class OEMContentMapService {
     @Inject
     private AccountContentRepository accountContentRepository;
     @Inject
-    private HeroMapFactory heroMapFactory;
+    private HeroMapService heroMapService;
 
 
 
@@ -26,6 +26,6 @@ public class OEMContentMapService {
     }
 
     public HeroContent findHeroContentForAccountId(String accountId) {
-        return heroMapFactory.determineHeroContent(accountId);
+        return heroMapService.determineHeroContent(accountId);
     }
 }

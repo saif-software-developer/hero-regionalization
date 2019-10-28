@@ -20,7 +20,7 @@ public class HeroContentFactory {
             Map<String, Map<String, String> > zoneMap  =   oemContentMap.mapByName("zoneMap");
             String zoneId =   accountInfo.getAccountZone();
 
-            if(zoneMap.get(zoneId)   !=  null){
+            if(zoneMap.get(zoneId) !=  null){
                 return zoneMap.get(zoneId);
             }else{
                 return null;

@@ -8,10 +8,10 @@ import javax.inject.Singleton;
 import java.util.Map;
 
 @Singleton
-public class HeroMapFactory {
+public class HeroMapService {
 
     @Inject
-    private AccountInfoService      accountInfoService;
+    private AccountInfoServiceInterface accountInfoService;
     @Inject
     private AccountContentService accountContentService;
 
